@@ -1,0 +1,131 @@
+@font-face {
+    font-family: "doti";
+    src: url("./doto.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body#upPage {
+    background: #202020;
+    animation: anifade 0.5s ease 0s 1;
+}
+
+.disp-B {
+    display: block;
+}
+
+.fl {
+    display: flex;
+}
+
+.plmc {
+    justify-content: center;
+    align-items: center;
+}
+
+.por {position: relative;}
+
+.picCont {
+    width: 100%;  
+} 
+
+.picCont img {
+    width: 55px;
+    top: 110px;
+    animation: anipic 1s ease-out var(--pr, 0s) forwards;
+}
+
+.wv100 {
+    width: 100%;
+    height: 100vh;
+}
+
+.mrg0 {
+    margin: 0;
+}
+
+.ovf-H {
+    overflow: hidden;
+}
+
+.aniTex {
+    font-family: "doti";
+    font-size: 3rem;
+    font-weight: 700;
+    background: linear-gradient(
+        90deg,
+        #dc8a78,
+        #dd7878,
+        #ea76cb,
+        #179299,
+        #04a5e5,
+        #209fb5,
+        #7287fd,
+        #e64553
+    );
+    background-size: 400% 400%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: anitext 8s linear infinite;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+@keyframes anitext {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 400% 50%;
+    }
+}
+
+@keyframes anipic {
+    0% {
+        top: 110px;
+        opacity: 0;
+    }
+    100% {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes anifade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@media (max-width: 710px) {
+    .aniTex {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 495px) {
+    .aniTex {
+        font-size: 1.5rem;
+    }
+
+    .picCont img {
+        width: 45px;
+    }
+}
+
+@media (max-width: 380px) {
+    .aniTex {
+        font-size: 1.25rem;
+    }
+
+    .picCont img {
+        width: 35px;
+    }
+}
